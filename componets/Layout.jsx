@@ -7,7 +7,9 @@ const Layout = (props) => (
             <title>BitPrice</title>
         </Head>
         <Navbar />
-        {props.children}
+        <div className="container">
+            {props.children}
+        </div>
     </div>
 );
 

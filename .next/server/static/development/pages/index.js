@@ -137,7 +137,14 @@ const Layout = props => __jsx("div", {
     lineNumber: 9
   },
   __self: undefined
-}), props.children);
+}), __jsx("div", {
+  className: "container",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
+}, props.children));
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
@@ -183,7 +190,7 @@ const Navbar = () => __jsx("nav", {
     lineNumber: 6
   },
   __self: undefined
-}, "BitzPrice"), __jsx("div", {
+}, "BitPrice"), __jsx("div", {
   className: "collapse navbar-collapse",
   __source: {
     fileName: _jsxFileName,
