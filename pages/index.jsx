@@ -8,7 +8,6 @@ const Index = (props) => (
         <div>
             <h1>Welcom to Bitprice</h1>
             <Prices bpi={props.bpi} />
-            { console.log(props.bpi) }
         </div>
     </Layout>
 );

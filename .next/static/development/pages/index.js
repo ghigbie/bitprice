@@ -11319,7 +11319,7 @@ var Index = function Index(props) {
       lineNumber: 10
     },
     __self: this
-  }), console.log(props.bpi)));
+  })));
 };
 
 Index.getInitialProps =

@@ -2095,7 +2095,7 @@ const Index = props => __jsx(_componets_Layout__WEBPACK_IMPORTED_MODULE_2__["def
     lineNumber: 10
   },
   __self: undefined
-}), console.log(props.bpi)));
+})));
 
 Index.getInitialProps = async () => {
   const res = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
