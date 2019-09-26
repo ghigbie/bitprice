@@ -1,12 +1,13 @@
 import Fetch  from 'isomorphic-unfetch';
 import Layout from './../componets/Layout';
+import Prices from './../componets/Prices';
 
 
-const Index = () => (
+const Index = (props) => (
     <Layout>
         <div>
             <h1>Welcom to Bitprice</h1>
-            <Prices bpi={props.bpi} />
+            <Prices bpi={this.props.bpi} />
         </div>
     </Layout>
 );
