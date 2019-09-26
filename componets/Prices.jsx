@@ -6,10 +6,19 @@ class Prices extends React.Component {
     render(){
         return (
             <div>
-                Prices
-                <div>USD { this.props.bpi.USD.rate_float }</div>
-                <div>GBP { this.props.bpi.GBP.rate_float }</div>
-                <div>EUR { this.props.bpi.EUR.rate_float }</div>
+                <ul className="list-group">
+                    <li className="list-group-item">
+                        Bitcoin rate for {this.props.bpi.USD.description}:
+                        &nbsp;
+                        <span className="badge badge-primary">
+                            {this.props.bpi.USD.code}
+                        </span>
+                        &nbsp;
+                        <strong>
+                            {this.props.bpi.USD.rate}
+                        </strong>
+                    </li>
+                </ul>
             </div>
         );
     }

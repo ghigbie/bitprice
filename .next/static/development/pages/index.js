@@ -236,25 +236,34 @@ function (_React$Component) {
           lineNumber: 8
         },
         __self: this
-      }, "Prices", __jsx("div", {
+      }, __jsx("ul", {
+        className: "list-group",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        },
+        __self: this
+      }, __jsx("li", {
+        className: "list-group-item",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 10
         },
         __self: this
-      }, "USD ", this.props.bpi.USD.rate_float), __jsx("div", {
+      }, "Bitcoin rate for ", this.props.bpi.USD.description, ": \xA0", __jsx("span", {
+        className: "badge badge-primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 13
         },
         __self: this
-      }, "GBP ", this.props.bpi.GBP.rate_float), __jsx("div", {
+      }, this.props.bpi.USD.code), "\xA0", __jsx("strong", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 17
         },
         __self: this
-      }, "EUR ", this.props.bpi.EUR.rate_float));
+      }, this.props.bpi.USD.rate))));
     }
   }]);
 
