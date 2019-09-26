@@ -1959,37 +1959,49 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _componets_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../componets/Layout */ "./componets/Layout.jsx");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _componets_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../componets/Layout */ "./componets/Layout.jsx");
 var _jsxFileName = "/Users/georgehigbie/next/bitprice/pages/index.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Index = () => __jsx(_componets_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 4
-  },
-  __self: undefined
-}, __jsx("div", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 5
-  },
-  __self: undefined
-}, __jsx("h1", {
+
+const Index = () => __jsx(_componets_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 6
   },
   __self: undefined
-}, "Home"), __jsx("p", {
+}, __jsx("div", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 7
   },
   __self: undefined
-}, "Application to view bitcoin prices.")));
+}, __jsx("h1", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8
+  },
+  __self: undefined
+}, "Welcom to Bitprice"), __jsx(Prices, {
+  bpi: props.bpi,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9
+  },
+  __self: undefined
+})));
+
+Index.getInitialProps = async () => {
+  const res = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
+  const data = await res.json();
+  return {
+    bpi: data.bpi
+  };
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
@@ -2081,6 +2093,17 @@ module.exports = require("core-js/library/fn/object/keys");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/promise");
+
+/***/ }),
+
+/***/ "isomorphic-unfetch":
+/*!*************************************!*\
+  !*** external "isomorphic-unfetch" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("isomorphic-unfetch");
 
 /***/ }),
 
