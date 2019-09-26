@@ -230,40 +230,131 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Prices, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
+      var listItem = '';
+
+      if (this.state.currency === 'GBP') {
+        listItem = __jsx("li", {
+          className: "list-group-item",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10
+          },
+          __self: this
+        }, "Bitcoin rate for ", this.props.bpi.GBP.description, ": \xA0", __jsx("span", {
+          className: "badge badge-primary",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13
+          },
+          __self: this
+        }, this.props.bpi.GBP.code), "\xA0", __jsx("strong", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 17
+          },
+          __self: this
+        }, this.props.bpi.GBP.rate));
+      } else if (this.state.currency == 'EUR') {
+        listItem = __jsx("li", {
+          className: "list-group-item",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24
+          },
+          __self: this
+        }, "Bitcoin rate for ", this.props.bpi.EUR.description, ": \xA0", __jsx("span", {
+          className: "badge badge-primary",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27
+          },
+          __self: this
+        }, this.props.bpi.EUR.code), "\xA0", __jsx("strong", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31
+          },
+          __self: this
+        }, this.props.bpi.EUR.rate));
+      } else {
+        listItem = __jsx("li", {
+          className: "list-group-item",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38
+          },
+          __self: this
+        }, "Bitcoin rate for ", this.props.bpi.USD.description, ": \xA0", __jsx("span", {
+          className: "badge badge-primary",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 41
+          },
+          __self: this
+        }, this.props.bpi.USD.code), "\xA0", __jsx("strong", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 45
+          },
+          __self: this
+        }, this.props.bpi.USD.rate));
+      }
+
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 52
         },
         __self: this
       }, __jsx("ul", {
         className: "list-group",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 53
         },
         __self: this
-      }, __jsx("li", {
-        className: "list-group-item",
+      }, listItem), __jsx("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 56
         },
         __self: this
-      }, "Bitcoin rate for ", this.props.bpi.USD.description, ": \xA0", __jsx("span", {
-        className: "badge badge-primary",
+      }), __jsx("select", {
+        onChange: function onChange(e) {
+          return _this2.setState({
+            currency: e.target.value
+          });
+        },
+        className: "form-control",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 57
         },
         __self: this
-      }, this.props.bpi.USD.code), "\xA0", __jsx("strong", {
+      }, __jsx("option", {
+        value: "USD",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 59
         },
         __self: this
-      }, this.props.bpi.USD.rate))));
+      }, "USD"), __jsx("option", {
+        value: "GBP",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        },
+        __self: this
+      }, "GBP"), __jsx("option", {
+        value: "EUR",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        },
+        __self: this
+      }, "EUR")));
     }
   }]);
 
@@ -11321,11 +11412,17 @@ var Index = function Index(props) {
       lineNumber: 9
     },
     __self: this
-  }, "Welcom to Bitprice"), __jsx(_componets_Prices__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    bpi: props.bpi,
+  }, "Welcom to Bitprice"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
+    },
+    __self: this
+  }, "Check current bitcoin rate:"), __jsx(_componets_Prices__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    bpi: props.bpi,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
     },
     __self: this
   })));
