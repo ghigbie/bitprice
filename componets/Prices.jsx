@@ -7,7 +7,9 @@ class Prices extends React.Component {
         return (
             <div>
                 Prices
-                {props.bpi}
+                <div>USD { this.props.bpi.USD.rate_float }</div>
+                <div>GBP { this.props.bpi.GBP.rate_float }</div>
+                <div>EUR { this.props.bpi.EUR.rate_float }</div>
             </div>
         );
     }

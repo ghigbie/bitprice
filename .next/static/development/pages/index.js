@@ -39,17 +39,27 @@ var Layout = function Layout(props) {
       lineNumber: 7
     },
     __self: this
-  }, "BitPrice")), __jsx(_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "BitPrice"), __jsx("link", {
+    rel: "stylesheet",
+    href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
+    integrity: "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm",
+    crossorigin: "anonymous",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 8
+    },
+    __self: this
+  })), __jsx(_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
     },
     __self: this
   }), __jsx("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: this
   }, props.children));
@@ -226,7 +236,25 @@ function (_React$Component) {
           lineNumber: 8
         },
         __self: this
-      }, "Prices", props.bpi);
+      }, "Prices", __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: this
+      }, "USD ", this.props.bpi.USD.rate_float), __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        },
+        __self: this
+      }, "GBP ", this.props.bpi.GBP.rate_float), __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        },
+        __self: this
+      }, "EUR ", this.props.bpi.EUR.rate_float));
     }
   }]);
 
@@ -11258,10 +11286,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _componets_Prices__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../componets/Prices */ "./componets/Prices.jsx");
 
 
-
-var _this = undefined,
-    _jsxFileName = "/Users/georgehigbie/next/bitprice/pages/index.jsx";
-
+var _jsxFileName = "/Users/georgehigbie/next/bitprice/pages/index.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -11288,13 +11313,13 @@ var Index = function Index(props) {
     },
     __self: this
   }, "Welcom to Bitprice"), __jsx(_componets_Prices__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    bpi: _this.props.bpi,
+    bpi: props.bpi,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
-  })));
+  }), console.log(props.bpi)));
 };
 
 Index.getInitialProps =
@@ -11307,21 +11332,23 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          _context.next = 2;
+          console.log("@@@@Initial@@@@");
+          _context.next = 3;
           return fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
 
-        case 2:
+        case 3:
           res = _context.sent;
-          _context.next = 5;
+          _context.next = 6;
           return res.json();
 
-        case 5:
+        case 6:
           data = _context.sent;
+          console.log(data);
           return _context.abrupt("return", {
             bpi: data.bpi
           });
 
-        case 7:
+        case 9:
         case "end":
           return _context.stop();
       }

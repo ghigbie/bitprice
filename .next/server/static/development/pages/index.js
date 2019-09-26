@@ -131,17 +131,27 @@ const Layout = props => __jsx("div", {
     lineNumber: 7
   },
   __self: undefined
-}, "BitPrice")), __jsx(_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+}, "BitPrice"), __jsx("link", {
+  rel: "stylesheet",
+  href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
+  integrity: "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm",
+  crossorigin: "anonymous",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 8
+  },
+  __self: undefined
+})), __jsx(_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
   },
   __self: undefined
 }), __jsx("div", {
   className: "container",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 11
   },
   __self: undefined
 }, props.children));
@@ -285,7 +295,25 @@ class Prices extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         lineNumber: 8
       },
       __self: this
-    }, "Prices", props.bpi);
+    }, "Prices", __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, "USD ", this.props.bpi.USD.rate_float), __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }, "GBP ", this.props.bpi.GBP.rate_float), __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, "EUR ", this.props.bpi.EUR.rate_float));
   }
 
 }
@@ -2061,17 +2089,19 @@ const Index = props => __jsx(_componets_Layout__WEBPACK_IMPORTED_MODULE_2__["def
   },
   __self: undefined
 }, "Welcom to Bitprice"), __jsx(_componets_Prices__WEBPACK_IMPORTED_MODULE_3__["default"], {
-  bpi: undefined.props.bpi,
+  bpi: props.bpi,
   __source: {
     fileName: _jsxFileName,
     lineNumber: 10
   },
   __self: undefined
-})));
+}), console.log(props.bpi)));
 
 Index.getInitialProps = async () => {
+  console.log("@@@@Initial@@@@");
   const res = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
   const data = await res.json();
+  console.log(data);
   return {
     bpi: data.bpi
   };
