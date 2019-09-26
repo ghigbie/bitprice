@@ -1,8 +1,12 @@
+import Layout from './../componets/Layout';
+
 const Index = () => (
-    <div>
-        <h1>About</h1>
-        <p>Application to view bitcoin prices.</p>
-    </div>
+    <Layout>
+        <div>
+            <h1>Home</h1>
+            <p>Application to view bitcoin prices.</p>
+        </div>
+    </Layout>
 );
 
 export default Index;

@@ -1,7 +1,11 @@
+import Layout from './../componets/Layout';
+
 const About = () => (
-    <div>
-        <h1>About</h1>
-    </div>
+    <Layout>
+        <div>
+            <h1>About</h1>
+        </div>
+    </Layout>
 );
 
 export default About;

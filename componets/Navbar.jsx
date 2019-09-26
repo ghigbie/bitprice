@@ -24,8 +24,7 @@ const Navbar = () => (
                 </Link>
             </li>
         </ul>
-        <style jsx>
-        {`
+        <style jsx>{`
             ul {
                 background: #333;
                 color: #fff;
@@ -40,7 +39,8 @@ const Navbar = () => (
                 color: #fff;
                 text-decoration: none;
             }
-        `}
-        </style>
+        `}</style>
     </div>
 );
+
+export default Navbar;
