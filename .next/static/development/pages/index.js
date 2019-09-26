@@ -11332,23 +11332,21 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          console.log("@@@@Initial@@@@");
-          _context.next = 3;
+          _context.next = 2;
           return fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
 
-        case 3:
+        case 2:
           res = _context.sent;
-          _context.next = 6;
+          _context.next = 5;
           return res.json();
 
-        case 6:
+        case 5:
           data = _context.sent;
-          console.log(data);
           return _context.abrupt("return", {
             bpi: data.bpi
           });
 
-        case 9:
+        case 7:
         case "end":
           return _context.stop();
       }
